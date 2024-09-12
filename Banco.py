@@ -26,7 +26,7 @@ while contador == 0:
             elif saque <= saldo:    
                 saldo -= saque
                 limite_saque += 1
-                print (f"Saque efetuado com sucesso no valor de {saque}, seu novo saldo é: {saldo}.")
+                print (f"Saque efetuado com sucesso no valor de {saque:,.2f}, seu novo saldo é: {saldo:,.2f}.")
                 extrato += (f" \nSaque realizado no valor de = R${saque:,.2f}")
             else:
                 print ("Saldo insuficiente para realizar o saque")
@@ -36,8 +36,8 @@ while contador == 0:
             print ("Depósito no valor de zero ou negativo não é permitido")
         else:
             saldo += deposito
-            extrato += (f"\nDepósito realizado no valor de = {deposito}")
-            print (f"Depósito realizado com sucesso, seu novo saldo é: {saldo}")
+            extrato += (f"\nDepósito realizado no valor de = {deposito:,.2f}")
+            print (f"Depósito realizado com sucesso, seu novo saldo é: {saldo:,.2f}")
     elif acao == 3:
         print (extrato)
     elif acao == 0:
